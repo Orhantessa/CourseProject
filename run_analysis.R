@@ -70,5 +70,6 @@ MeanAverage <- rbind(MeanAverage_subj, MeanAverage_act)
 StDivAverage <- rbind(StDivAverage_subj, StDivAverage_act)
 
 tidyDataSet <- rbind(MeanAverage, StDivAverage)
+colnames(tidyDataSet) <- c("MeanAverage", "StDivAverage")
 
 write.table(tidyDataSet, file = "TidyDataSet.txt", row.names = FALSE)
